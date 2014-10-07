@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Can't we all just get along (and use node.js)?</title>
+</head>
+
+<body>
+    <textarea id="source">
+layout: true
+class: huge-title, inverse, center, middle
+---
+# So tell me again why you're not using node.js?
+
+???
+`P` for presenter mode.
+`C` to open a cloned window.
+---
+layout: false
+class: middle
+# jordan rousseau
+## [@jvrousseau](http://twitter.com/jvrousseau)
+### [rousseau.io](http://rousseau.io)
+### [github.com/jvrousseau](http://github.com/jvrousseau)
+---
+layout: false
+class: middle
+## [@weatherdectech](http://twitter.com/weatherdectech)
+## founded 2000
+## 90+ employees and growing
+## south research campus at ou
+![Weather Decision Technologies](img/wdt_logo.png)
+---
+layout: false
+
+##What I will attempt to do
+
+- how wdt (the web team) made the decision to node
+
+- show off a (very) quick prototype application
+
+- go through some common problems
+
+- show off some tools for running node in production
+
+- show off some tools that we use for CI/CD
+
+- _not_ completely trash other languages
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+start a conversation
+
+---
+layout: false
+class: center, middle
+
+# caveat
+![](img/cat.gif)
+---
+layout: false
+class: middle
+_I bet on JavaScript a long time ago, and alas, like English — it’s everywhere._
+
+-@ded
+
+???
+Dustin Diaz - JavaScript Design Patterns
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+i live in javascript
+
+???
+past 2 years the team has written javascript
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+actionscript
+
+???
+prior to that the team wrote client-side actionscript and server-side php
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+what changed?
+---
+layout: false
+class: center, middle
+
+# FLASH IS DEAD
+![](img/pingpong.gif)
+---
+.left-column[
+ ### apple
+]
+.right-column[
+
+- hostile to flash on the web
+
+- thoughts on flash (april 2010)
+
+- no flash on apple devices
+
+- flash no longer pre-installed with mac (october 2011)
+
+]
+---
+.left-column[
+ ### apple
+ ### google
+]
+.right-column[
+
+- incremental updates to javascript maps
+
+- complete abandonment of flash maps
+
+- javacript api v3 released (june 2010)
+
+- flash maps api deprecation (september 2011)
+
+- charge for google maps usage (november 2011)
+
+]
+---
+.left-column[
+ ### apple
+ ### google
+ ### adobe
+]
+.right-column[
+
+- slowly started to move away from flash for web development
+
+- adobe max conference priorities (october 2011)
+
+- flex put out to open source pasture -- not the good kind (november 2011)
+
+- "We will continue making significant contributions to open web technologies like WebKit &amp; jQuery..."
+
+]
+---
+.left-column[
+ ### apple
+ ### google
+ ### adobe
+ ### html5
+]
+.right-column[
+
+- marketing
+
+- client requests
+
+- marketing
+
+- client requests
+
+- buzzwords
+
+]
+---
+layout: false
+class: center, middle
+
+# self-preservation
+![](img/raccoon.gif)
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+what about server-side?
+---
+.left-column[
+ ### php
+ ]
+ .right-column[
+
+- legacy code kept from upgrading php versions
+
+- frameworks are bloated
+
+- when have you ever seen pretty php code?
+
+- complex error reporting. no stack traces by default or for fatal errors.
+
+- package management?
+
+- best option: try to use zend framework
+
+- when you work with php for 2+ years...you start to really hate it
+
+- a good read [php: a fractal of bad design](http://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/)
+
+ ]
+
+???
+the entire team knows php, but a new framework would be a learning curve
+project structure can turn to mush
+---
+.left-column[
+ ### php
+ ]
+ .right-column[
+
+_PHP is nothing but exceptions, and it is not okay when wrestling the language takes more effort than actually writing your program. My tools should not create net positive work for me to do._
+
+-@eevee
+
+]
+---
+.left-column[
+ ### php
+ ### python
+]
+.right-column[
+
+- python 3 update is killing python
+
+- pip is good, but only for python 2.x
+
+- cost time/money to port applications + dependencies to python 3
+
+- learning curve for creating apis from frameworks (flask)
+
+- one more good read [python 3 is killing python](https://medium.com/@thezerobit/python-3-is-killing-python-5d2ad703365d)
+]
+---
+.left-column[
+ ### php
+ ### python
+]
+.right-column[
+
+_People either continue to write software in Python 2 or they pick another language that did not shoot itself in the face._
+
+-@thezerobit
+
+]
+???
+Stephen A. Goss
+---
+ .left-column[
+  ### php
+  ### python
+  ### .net
+  ]
+  .right-column[
+
+ - approaching zero .net knowledge (which isn't a terrible thing...)
+
+- abstraction to the real code
+
+- company stack is LAMP+Py -- nearly impossible to add .net stack
+
+- _...designed to tightly integrate with and seamlessly extend the Microsoft stack in extremely powerful but ultimately incremental ways_
+
+- another good read [ceo friday: why we don’t hire .net programmers](http://blog.expensify.com/2011/03/25/ceo-friday-why-we-dont-hire-net-programmers/)
+]
+---
+ .left-column[
+  ### php
+  ### python
+  ### .net
+  ]
+  .right-column[
+
+_.NET is designed to extend, not disrupt_
+
+ -@quinthar
+
+]
+???
+David Barrett - CEO of expensify
+  ]
+---
+.left-column[
+ ### why no?
+]
+.right-column[
+
+- any language has its problems
+
+- highlihgts of negativity without  context only fuels the fire language wars
+
+- any language has its merits
+
+- cost/benifit of negatives/positives should always be calculated
+
+- find what negativites will outweigh the positives of a specific language
+
+- trolling other languages does not help (though it's pretty fun(ny))
+]
+???
+how to push to NOT use a language
+---
+.left-column[
+ ### why no?
+ ### why yes?
+]
+.right-column[
+
+- any change from widely used language to a new one needs to be explained
+
+- there is _always_ a cost with changing core languages
+
+- you will never convice anyone by saying, _but...but...company-y uses language-x_
+
+- really understand why you and your team would want to switch to a new language
+
+- considering return on investment and costs surrounding a learning curve (this will make management happy)
+
+]
+???
+how to push to use a language
+---
+.left-column[
+ ### why no?
+ ### why yes?
+ ### why node?
+]
+.right-column[
+
+- the node community is incredible - help is a tweet away/examples are everywhere
+
+- package management is the best that's out there
+
+- less context switching for developing both server and client-side
+
+- DRY application programming is almost forced upon you
+
+- browserify reinforces the usability accross server/client
+
+]
+???
+DRY - don't repeat yourself
+share code between front and back of a web application
+---
+layout: false
+class: center, middle
+
+# did i mention that i'm a [wizard](http://rousseau.io/browserify-okcjs)?
+![wizard](img/rousseau-wizard.jpg)
+---
+.left-column[
+ ### why no?
+ ### why yes?
+ ### why node?
+]
+.right-column[
+
+- the node community is incredible - help is a tweet away/examples are everywhere
+
+- package management is the best that's out there
+
+- less context switching for developing both server and client-side
+
+- DRY application programming is almost forced upon you
+
+- browserify reinforces the usability accross server/client
+
+- a web developer with zero node experience will acclimate herself/himself if she/he has known javascript from web development
+
+]
+???
+joyent developer sites
+---
+layout: false
+class: middle
+_2 new hires this week (diff teams in my org), got acclimated to code base and checked in first commit in < 4 hrs. In 2011 this took weeks._
+
+-@billwscott
+
+???
+Bill Scott - PayPal
+---
+.left-column[
+ ### why no?
+ ### why yes?
+ ### why node?
+ ### how?
+]
+.right-column[
+
+- get permission to build a prototype of a small portion of a legacy application
+
+- make sure prototype is written well.
+
+- load test prototype
+
+- ???
+
+- profit
+
+]
+???
+This should show two things. 1) how fast a prototype can be built (with a small amount of code) and how fast and stable a nodejs application can be.
+---
+layout: false
+class: middle
+
+#nodejs.org example
+
+```
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+
+```
+---
+layout: false
+
+#prototype
+
+- knex.js
+
+- bookshelf.js
+
+- hapi.js
+
+- joi
+
+- lout
+
+???
+knex will bootstrap the entire database
+bookshelf is an ORM we will use this to add sample data to database
+and create all the models to our api
+hapi is a server framework
+joi is a schema validation framework
+lout is a hapi documentation generator
+---
+layout: false
+class: center, middle
+
+# demo time!!!
+![](img/anna-excited.gif)
+---
+layout: false
+class: center, middle
+#Code found here:
+#[http://git.io/WJDa5Q](http://git.io/WJDa5Q)
+---
+layout: false
+class: center, middle
+
+# success!!!
+![](img/babies-dance.jpg)
+---
+layout: false
+class: center, middle
+
+# success...
+![](img/merida-ohno.gif)
+
+???
+when the rubber meets the road, you will need to push through the errors in development
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+#Problems
+
+(they are going to happen)
+---
+layout: false
+
+##common nodejs problems
+
+- handeling event loops/callback hell
+
+- memory leaks
+
+- handeling errors
+
+- maxing out cpu
+
+- network i/o bounds
+
+- database connections/queries
+
+???
+what you write affects the server. you can take something down very quick with node just as much as you can with other languages
+
+node is not a silver bullet
+
+you can do stupid stuff in node
+
+breaking servers will make you a better developer
+
+monitor the shit out of your application!
+
+---
+
+#as a developer you will need to
+
+- develop
+
+- deploy
+
+- handle scale
+
+- monitor
+
+- clean up your messes
+
+???
+prototyping anything can fall into production, so create well defined and well written prototypes
+tools to help - nodeload (for loadtesting)
+    chrome dev tools (memory profiler)
+    testing frameworks -- we use mocha
+    test
+    handle all sorts of errors, user/server/unrecoverable
+    log as much as possible!
+
+You shouldn't rely on git clone; npm install; forever start app.js
+
+Your application should be able to handle a decent amount of load on its own.
+load balancing and scaling with hardware might be necessary
+
+pm2 monit, outputting server stats to a log
+
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+better application monitoring and deployment
+---
+layout: false
+
+##node application deployment
+
+- unlike php you can't drop files on an server with apache and you're good
+
+- as close to 100% uptime as possible
+
+- use the availbale cores of the machine
+
+- have some good logging
+
+- scriptable monitoring
+
+- ```forever start app.js``` is not the greatest solution
+???
+
+forever was serviceable at the beginning
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+#PM2
+---
+layout: false
+
+##PM2
+
+- built-in load balancer (cluster module)
+
+- script daemonization
+
+- 0s downtime reload
+
+- generate startup scripts
+
+- pause or stop unstable processes easily
+
+- monitor in console
+
+- combined logging
+
+---
+layout: false
+class: center, middle
+
+# another demo!!!
+![](img/demo-time.gif)
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+CI/CD
+---
+layout: false
+
+##what do we use?
+
+- Jenkins
+
+- Nexus
+
+- npm.wdtinc.com
+
+---
+layout: false
+.left-column[
+### jenkins
+]
+.right-column[
+
+- building/testing software projects continuously
+
+- on commit, build
+
+- deploy to server
+
+- save to repo manager
+]
+---
+layout: false
+.left-column[
+### jenkins
+### nexus
+]
+.right-column[
+
+- repository manager
+
+- artifact management
+
+- can save a tarball
+
+- npm install *tarball* works
+
+- ```nexus-domain/service/local/artifact/maven/content?g=group-name&a=package-name&v=X.X.X&r=node-pkg&e=tgz```
+
+]
+---
+layout: false
+.left-column[
+### jenkins
+### nexus
+### npm-lite
+]
+.right-column[
+
+- written by [@idevinclark](http://twitter.com/idevinclark)
+
+- uses nexus api to shorten nexus artifact requests
+
+- ```npm.wdtinc.com/project-name/X.X.X```
+
+- first wdt application written in hapi.js
+]
+---
+layout: false
+
+#movement towards stable node environment and deployment
+
+- from git clone/pull &amp;&amp; forever start app.js to automated deployment
+
+- testing with mocha/chai
+
+- using ORM to create a more robust and stable model
+
+- migrate applications from express to hapi
+
+- use pm2 to load balance requests across cores on a server
+---
+layout: false
+class: huge-title, inverse, center, middle
+
+you don't have to know node (or javascript) to do this
+
+(just jump in)
+
+---
+layout: false
+
+#where are we now (using node)?
+
+- 3 full stack web applications
+
+- 3 event driven applications
+
+- 1 static image generator
+
+- 2 high throughput APIs
+
+- 3 or 4 applications in the pipeline
+    </textarea>
+    <script src="remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var hljs = remark.highlighter.engine;
+    </script>
+    <!--<script src="js/remark.language.js" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            ratio: '4:3',
+            highlightStyle: 'tomorrow',
+            highlightLanguage: 'remark'
+        });
+    </script>
+</body>
+
+</html>
