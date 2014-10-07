@@ -12,7 +12,7 @@
 layout: true
 class: huge-title, inverse, center, middle
 ---
-# So tell me again why you're not using node.js?
+#so tell me again why you're not using node.js?
 
 ???
 `P` for presenter mode.
@@ -35,7 +35,7 @@ class: middle
 ---
 layout: false
 
-##What I will attempt to do
+##what I will attempt to do
 
 - how wdt (the web team) made the decision to node
 
@@ -45,7 +45,7 @@ layout: false
 
 - show off some tools for running node in production
 
-- show off some tools that we use for CI/CD
+- show off some tools that we use for ci/cd
 
 - _not_ completely trash other languages
 ---
@@ -63,12 +63,24 @@ class: center, middle
 ---
 layout: false
 class: middle
-_I bet on JavaScript a long time ago, and alas, like English — it’s everywhere._
+_i bet on javascript a long time ago, and alas, like english — it’s everywhere._
 
 -@ded
 
 ???
 Dustin Diaz - JavaScript Design Patterns
+---
+#where do we use node in production?
+
+- 3 full stack web applications
+
+- 3 event driven applications
+
+- 1 static image generator
+
+- 2 high throughput APIs
+
+- 3 or 4 applications in the pipeline
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -122,7 +134,7 @@ class: center, middle
 
 - complete abandonment of flash maps
 
-- javacript api v3 released (june 2010)
+- javacsript api v3 released (june 2010)
 
 - flash maps api deprecation (september 2011)
 
@@ -165,6 +177,8 @@ class: center, middle
 
 - buzzwords
 
+- did i mention marketing?
+
 ]
 ---
 layout: false
@@ -177,6 +191,8 @@ layout: false
 class: huge-title, inverse, center, middle
 
 what about server-side?
+
+(this is what I found for wdt)
 ---
 .left-column[
  ### php
@@ -288,15 +304,15 @@ David Barrett - CEO of expensify
 
 - any language has its problems
 
-- highlihgts of negativity without  context only fuels the fire language wars
+- highlighting only negative without context only fuels the fire language wars
 
 - any language has its merits
 
-- cost/benifit of negatives/positives should always be calculated
+- cost/benifit of language should always be calculated
 
-- find what negativites will outweigh the positives of a specific language
+- find out if the negatives will outweigh the positives of a specific language
 
-- trolling other languages does not help (though it's pretty fun(ny))
+- trolling other languages does not help (though it can be pretty fun(ny))
 ]
 ???
 how to push to NOT use a language
@@ -311,7 +327,7 @@ how to push to NOT use a language
 
 - there is _always_ a cost with changing core languages
 
-- you will never convice anyone by saying, _but...but...company-y uses language-x_
+- you will never convince anyone by saying, _but...but...company-y uses language-x_
 
 - really understand why you and your team would want to switch to a new language
 
@@ -336,41 +352,15 @@ how to push to use a language
 
 - DRY application programming is almost forced upon you
 
-- browserify reinforces the usability accross server/client
-
-]
-???
-DRY - don't repeat yourself
-share code between front and back of a web application
----
-layout: false
-class: center, middle
-
-# did i mention that i'm a [wizard](http://rousseau.io/browserify-okcjs)?
-![wizard](img/rousseau-wizard.jpg)
----
-.left-column[
- ### why no?
- ### why yes?
- ### why node?
-]
-.right-column[
-
-- the node community is incredible - help is a tweet away/examples are everywhere
-
-- package management is the best that's out there
-
-- less context switching for developing both server and client-side
-
-- DRY application programming is almost forced upon you
-
-- browserify reinforces the usability accross server/client
+- browserify reinforces the usability across server/client
 
 - a web developer with zero node experience will acclimate herself/himself if she/he has known javascript from web development
 
 ]
 ???
 joyent developer sites
+DRY - don't repeat yourself
+share code between front and back of a web application
 ---
 layout: false
 class: middle
@@ -477,11 +467,11 @@ layout: false
 
 ##common nodejs problems
 
-- handeling event loops/callback hell
+- handling event loops/callback hell
 
 - memory leaks
 
-- handeling errors
+- handling errors
 
 - maxing out cpu
 
@@ -544,7 +534,7 @@ layout: false
 
 - as close to 100% uptime as possible
 
-- use the availbale cores of the machine
+- use the available cores of the machine
 
 - have some good logging
 
@@ -594,11 +584,11 @@ layout: false
 
 ##what do we use?
 
-- Jenkins
+- jenkins
 
-- Nexus
+- nexus
 
-- npm.wdtinc.com
+- npm-lite
 
 ---
 layout: false
@@ -609,7 +599,7 @@ layout: false
 
 - building/testing software projects continuously
 
-- on commit, build
+- on push to server, build
 
 - deploy to server
 
@@ -647,6 +637,8 @@ layout: false
 
 - uses nexus api to shorten nexus artifact requests
 
+- takes in semver ranges
+
 - ```npm.wdtinc.com/project-name/X.X.X```
 
 - first wdt application written in hapi.js
@@ -672,21 +664,6 @@ class: huge-title, inverse, center, middle
 you don't have to know node (or javascript) to do this
 
 (just jump in)
-
----
-layout: false
-
-#where are we now (using node)?
-
-- 3 full stack web applications
-
-- 3 event driven applications
-
-- 1 static image generator
-
-- 2 high throughput APIs
-
-- 3 or 4 applications in the pipeline
     </textarea>
     <script src="remark.min.js" type="text/javascript"></script>
     <script type="text/javascript">
