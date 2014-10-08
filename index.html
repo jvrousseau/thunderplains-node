@@ -33,19 +33,31 @@ class: middle
 ## south research campus at ou
 ![Weather Decision Technologies](img/wdt_logo.png)
 ---
+#where do we use node in production?
+
+- 3 full stack web applications
+
+- 3 event driven applications
+
+- 1 static image generator
+
+- 2 high load apis
+
+- 3 or 4 applications in the pipeline
+---
 layout: false
 
 ##what I will attempt to do
 
-- how wdt (the web team) made the decision to node
+- explain how wdt (the web team) made the decision to node
 
-- show off a (very) quick prototype application
+- show off a quick prototype application
 
 - go through some common problems
 
 - show off some tools for running node in production
 
-- show off some tools that we use for ci/cd
+- show some tools that we use for ci/cd
 
 - _not_ completely trash other languages
 ---
@@ -69,18 +81,6 @@ _i bet on javascript a long time ago, and alas, like english — it’s ever
 
 ???
 Dustin Diaz - JavaScript Design Patterns
----
-#where do we use node in production?
-
-- 3 full stack web applications
-
-- 3 event driven applications
-
-- 1 static image generator
-
-- 2 high load apis
-
-- 3 or 4 applications in the pipeline
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -107,7 +107,7 @@ what changed?
 layout: false
 class: center, middle
 
-# FLASH IS DEAD
+# flash is dead
 ![](img/pingpong.gif)
 ---
 .left-column[
@@ -156,7 +156,7 @@ class: center, middle
 
 - flex put out to open source pasture -- not the good kind (november 2011)
 
-- "We will continue making significant contributions to open web technologies like WebKit &amp; jQuery..."
+- "_we will continue making significant contributions to open web technologies like webkit &amp; jquery..._"
 
 ]
 ---
@@ -227,7 +227,7 @@ project structure can turn to mush
  ]
  .right-column[
 
-_PHP is nothing but exceptions, and it is not okay when wrestling the language takes more effort than actually writing your program. My tools should not create net positive work for me to do._
+###_php is nothing but exceptions, and it is not okay when wrestling the language takes more effort than actually writing your program. my tools should not create net positive work for me to do._
 
 -@eevee
 
@@ -256,7 +256,7 @@ _PHP is nothing but exceptions, and it is not okay when wrestling the language t
 ]
 .right-column[
 
-_People either continue to write software in Python 2 or they pick another language that did not shoot itself in the face._
+###_people either continue to write software in python 2 or they pick another language that did not shoot itself in the face._
 
 -@thezerobit
 
@@ -271,13 +271,13 @@ Stephen A. Goss
   ]
   .right-column[
 
- - approaching zero .net knowledge (which isn't a terrible thing...)
+- approaching zero .net knowledge
 
 - abstraction to the real code
 
-- company stack is LAMP+Py -- nearly impossible to add .net stack
+- company stack is lamp + py -- nearly impossible to add .net stack
 
-- _...designed to tightly integrate with and seamlessly extend the Microsoft stack in extremely powerful but ultimately incremental ways_
+- _...designed to tightly integrate with and seamlessly extend the microsoft stack in extremely powerful but ultimately incremental ways_
 
 - another good read [ceo friday: why we don’t hire .net programmers](http://blog.expensify.com/2011/03/25/ceo-friday-why-we-dont-hire-net-programmers/)
 ]
@@ -289,7 +289,7 @@ Stephen A. Goss
   ]
   .right-column[
 
-_.NET is designed to extend, not disrupt_
+###_.net is designed to extend, not disrupt_
 
  -@quinthar
 
@@ -351,7 +351,7 @@ how to push to use a language
 
 - less context switching for developing both server and client-side
 
-- DRY application programming is almost forced upon you
+- dry application programming is almost forced upon you
 
 - browserify reinforces the usability across server/client
 
@@ -363,12 +363,18 @@ joyent developer sites
 DRY - don't repeat yourself
 share code between front and back of a web application
 ---
-layout: false
-class: middle
-_2 new hires this week (diff teams in my org), got acclimated to code base and checked in first commit in < 4 hrs. In 2011 this took weeks._
+.left-column[
+ ### why no?
+ ### why yes?
+ ### why node?
+]
+.right-column[
+
+###_2 new hires this week (diff teams in my org), got acclimated to code base and checked in first commit in < 4 hrs. in 2011 this took weeks._
 
 -@billwscott
 
+]
 ???
 Bill Scott - PayPal
 ---
@@ -439,7 +445,7 @@ class: center, middle
 ---
 layout: false
 class: center, middle
-#Code found here:
+#code found here:
 #[http://git.io/WJDa5Q](http://git.io/WJDa5Q)
 ---
 layout: false
@@ -460,7 +466,7 @@ when the rubber meets the road, you will need to push through the errors in deve
 layout: false
 class: huge-title, inverse, center, middle
 
-#Problems
+#problems
 
 (they are going to happen)
 ---
@@ -547,11 +553,11 @@ forever was serviceable at the beginning
 layout: false
 class: huge-title, inverse, center, middle
 
-#PM2
+#pm2
 ---
 layout: false
 
-##PM2
+##pm2
 
 - built-in load balancer (cluster module)
 
@@ -577,7 +583,7 @@ class: center, middle
 layout: false
 class: huge-title, inverse, center, middle
 
-CI/CD
+ci/cd
 ---
 layout: false
 
@@ -620,7 +626,7 @@ layout: false
 
 - npm install *tarball* works
 
-- ```nexus-domain/service/local/artifact/maven/content?g=group-name&a=package-name&v=X.X.X&r=node-pkg&e=tgz```
+- ```nexus-domain/service/local/artifact/maven/content?g=group-name&amp;a=package-name&amp;v=X.X.X&amp;r=node-pkg&amp;e=tgz```
 
 ]
 ---
@@ -651,7 +657,7 @@ layout: false
 
 - testing with mocha/chai
 
-- using ORM to create a more robust and stable model
+- using orm to create a more robust and stable model
 
 - migrate applications from express to hapi
 
@@ -666,14 +672,15 @@ you don't have to know node
 (just jump in)
 ---
 layout: false
+class: middle
 
-#Questions?
+#questions?
 
-- [jrousseau@wdtinc.com](mailto:jrousseau@wdtinc.com)
+##[jrousseau@wdtinc.com](mailto:jrousseau@wdtinc.com)
 
-- [@jvrousseau](http://twitter.com/jvrousseau)
+###[@jvrousseau](http://twitter.com/jvrousseau)
 
-- slides: [http://git.io/V5iWuA](http://git.io/V5iWuA)
+###slides: [http://git.io/V5iWuA](http://git.io/V5iWuA)
 
 
     </textarea>
@@ -684,7 +691,7 @@ layout: false
     <!--<script src="js/remark.language.js" type="text/javascript"></script>-->
     <script type="text/javascript">
         var slideshow = remark.create({
-            ratio: '4:3',
+            ratio: '16:9',
             highlightStyle: 'tomorrow',
             highlightLanguage: 'remark'
         });
