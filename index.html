@@ -605,7 +605,7 @@ class: center, middle
 
 when the rubber meets the road, you will need to push through the errors in development
 
-don't be afraid of starting over -- that's what got you into the problem the first place
+don't be afraid of starting over
 
 if you find something better...STOP...and use it (more cost up front, but return on investment will be HUGE)
 
@@ -621,7 +621,7 @@ class: huge-title, inverse, center, middle
 
 don't let it discourage you
 
-it's not nodes fault...it is most likely your understand of node
+it's not nodes fault...it is most likely your understanding of node
 
 don't question your decision on the issues you run into...deal with them and improve your code
 
@@ -648,6 +648,8 @@ layout: false
 
 ???
 
+ugly code is not maintainable, and it's very easy to write ugly javascript code
+
 what you write affects the server. you can take something down very quick with node just as much as you can with other languages
 
 node is not a silver bullet
@@ -672,21 +674,23 @@ monitor the shit out of your application!
 
 - clean up your messes
 
+- plus a whole lot more
+
 ???
 
 prototyping anything can fall into production, so create well defined and well written prototypes
 
 tools to help - node-load (for loadtesting)
 
-    chrome dev tools (memory profiler)
+- chrome dev tools (memory profiler)
 
-    testing frameworks -- we use mocha
+- testing frameworks -- we use mocha
 
-    test
+- test
 
-    handle all sorts of errors, user/server/unrecoverable
+- handle all sorts of errors, user/server/unrecoverable
 
-    log as much as possible!
+- log as much as possible!
 
 Your application should be able to handle a decent amount of load on its own.
 
@@ -794,7 +798,7 @@ layout: false
 
 - task runner
 
-- browserify stuff
+- build and minify javascript
 
 - lint code
 
@@ -871,6 +875,8 @@ layout: false
 
 - migrate applications from express to hapi
 
+- utilize npm-lite to take advantage of semver ranges
+
 - use pm2 to load balance requests across cores on a server
 
 ???
@@ -894,7 +900,7 @@ you don't have to know node
 
 ???
 
-if you now a little bit of javascript and want to build something in node, it's pretty staightforward
+if you know a little bit of javascript and want to build something in node, it's pretty staightforward
 
 ---
 layout: false
@@ -917,7 +923,7 @@ class: middle
     <!--<script src="js/remark.language.js" type="text/javascript"></script>-->
     <script type="text/javascript">
         var slideshow = remark.create({
-            ratio: '16:9',
+            ratio: '4:3',
             highlightStyle: 'tomorrow',
             highlightLanguage: 'remark'
         });
