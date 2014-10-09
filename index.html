@@ -15,8 +15,12 @@ class: huge-title, inverse, center, middle
 #so tell me again why you're not using node.js?
 
 ???
+
 `P` for presenter mode.
+
 `C` to open a cloned window.
+
+Go S.L.O.W.
 ---
 layout: false
 class: middle
@@ -24,6 +28,17 @@ class: middle
 ## [@jvrousseau](http://twitter.com/jvrousseau)
 ### [rousseau.io](http://rousseau.io)
 ### [github.com/jvrousseau](http://github.com/jvrousseau)
+
+![](img/jordan-fam.jpeg)
+
+???
+
+I write code and hang out with my family
+
+---
+layout: false
+class: middle, center
+![](img/doc-laura.jpg)
 ---
 layout: false
 class: middle
@@ -32,6 +47,11 @@ class: middle
 ## 90+ employees and growing
 ## south research campus at ou
 ![Weather Decision Technologies](img/wdt_logo.png)
+
+???
+
+we build systems and applications for websites/enterprises/foriegn governemnts
+
 ---
 #where do we use node in production?
 
@@ -44,6 +64,18 @@ class: middle
 - 2 high load apis
 
 - 3 or 4 applications in the pipeline
+
+???
+
+Ecommerce Site, Consumer Weather Site, Enterprise User Portal
+
+Connect to rabbitmq and dissimenate events (lightning, watch warning, wdt meteorologist alerts)
+
+create a map with weather data
+
+real-time lightning using cassandra running on elastic load balancer
+package management api
+
 ---
 layout: false
 
@@ -60,11 +92,22 @@ layout: false
 - show some tools that we use for ci/cd
 
 - _not_ completely trash other languages
+
+???
+
+while it may seem i am trashing a language, this is what we found works for our company
+
+There will always be a need for other languages, I will attempt to step through that fine line
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
 
 start a conversation
+
+???
+
+at least give it a chance
 
 ---
 layout: false
@@ -72,6 +115,15 @@ class: center, middle
 
 # caveat
 ![](img/cat.gif)
+
+???
+
+I'm here doing what I love to do and telling you about it.
+
+I'm lucky enough to be doing this but I by no means am an expert at any of this
+
+I am learning as I go
+
 ---
 layout: false
 class: middle
@@ -80,7 +132,13 @@ class: middle
 -@ded
 
 ???
+
 Dustin Diaz - JavaScript Design Patterns
+
+As much as it's maligned, JavaScript is everywhere, and it will not go away for a long time.
+
+You can either choose to give it up and move over to another language, or embrace it and improve it
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -88,7 +146,11 @@ class: huge-title, inverse, center, middle
 i live in javascript
 
 ???
+
 past 2 years the team has written javascript
+
+we have legacy stuff to support, but javascript is where we are for the majority of the day
+
 ---
 layout: false
 class: center, middle
@@ -97,7 +159,11 @@ class: center, middle
 ![](img/alice-facepalm.jpg)
 
 ???
+
 prior to that the team wrote client-side actionscript
+
+Just like any other language, it was serviceable, but now looking back on it, we held on for way too long
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -109,6 +175,13 @@ class: center, middle
 
 # flash is dead
 ![](img/pingpong.gif)
+
+???
+
+told this over and over, but i just didn't want to believe it
+
+going back into a 'history' lesson for just a little bit
+
 ---
 .left-column[
  ### apple
@@ -181,6 +254,13 @@ class: center, middle
 - did i mention marketing?
 
 ]
+
+???
+
+So we started to develop in JavaScript.
+
+TBH I hated it. The reason why? I was doing it wrong...
+
 ---
 layout: false
 class: center, middle
@@ -194,6 +274,13 @@ class: huge-title, inverse, center, middle
 what about server-side?
 
 (pertaining to wdt)
+
+???
+
+content warning: i will be talking bad about languages, but this is how you have to make a decision
+
+this is where the talk should have begun
+
 ---
 .left-column[
  ### php
@@ -219,8 +306,13 @@ what about server-side?
  ]
 
 ???
+
 the entire team knows php, but a new framework would be a learning curve
+
 project structure can turn to mush
+
+new PHP is good...yes, but still a learning curve from old crappy php frameworks and code
+
 ---
 .left-column[
  ### php
@@ -249,6 +341,15 @@ project structure can turn to mush
 
 - one more good read [python 3 is killing python](https://medium.com/@thezerobit/python-3-is-killing-python-5d2ad703365d)
 ]
+
+???
+
+team kind of knows python
+
+other development teams use python a whole lot
+
+new apis in python using flask
+
 ---
 .left-column[
  ### php
@@ -281,6 +382,19 @@ Stephen A. Goss
 
 - another good read [ceo friday: why we don’t hire .net programmers](http://blog.expensify.com/2011/03/25/ceo-friday-why-we-dont-hire-net-programmers/)
 ]
+
+???
+
+i mention .net not because it was a real consideration for us, but because enterprises in OKC are completely married to it.
+
+if you are building websites, do you really need ASP .net to write your APIs?
+
+What is the limits? Are you staying because of preformance or comfort?
+
+Do you throw massives amount of hardware at a load problem?
+
+Entertaining piece RE: CEO Friday. They are hiring .net for windows application development
+
 ---
  .left-column[
   ### php
@@ -315,8 +429,13 @@ David Barrett - CEO of expensify
 
 - trolling other languages does not help (though it can be pretty fun(ny))
 ]
+
 ???
-how to push to NOT use a language
+
+when you are trying to switch, how do you convince someone to not use the current language?
+
+there is too much bullshit with developers trashing other languages
+
 ---
 .left-column[
  ### why no?
@@ -335,8 +454,15 @@ how to push to NOT use a language
 - considering return on investment and costs surrounding a learning curve (this will make management happy)
 
 ]
+
 ???
-how to push to use a language
+
+now lets talk about the positives...how do you talk up a language and convince someone to try it
+
+attention would absolutely be lost by saying "but its a cool language"
+
+developer enjoyment should be considered also. A happy developer is always more productive
+
 ---
 .left-column[
  ### why no?
@@ -359,9 +485,13 @@ how to push to use a language
 
 ]
 ???
+
 joyent developer sites
+
 DRY - don't repeat yourself
+
 share code between front and back of a web application
+
 ---
 .left-column[
  ### why no?
@@ -386,7 +516,7 @@ Bill Scott - PayPal
 ]
 .right-column[
 
-- get permission to build a prototype of a small portion of a legacy application
+- get permission (or not) to build a prototype of a small portion of a legacy application
 
 - make sure prototype is written well.
 
@@ -398,7 +528,13 @@ Bill Scott - PayPal
 
 ]
 ???
-This should show two things. 1) how fast a prototype can be built (with a small amount of code) and how fast and stable a nodejs application can be.
+
+This should show two things.
+
+1) how fast a prototype can be built (with a small amount of code)
+
+2) how fast and stable a nodejs application can be.
+
 ---
 layout: false
 class: middle
@@ -430,12 +566,17 @@ layout: false
 - lout
 
 ???
+
 knex will bootstrap the entire database
-bookshelf is an ORM we will use this to add sample data to database
-and create all the models to our api
+
+bookshelf is an ORM we will use this to add sample data to database and create all the models to our api
+
 hapi is a server framework
+
 joi is a schema validation framework
+
 lout is a hapi documentation generator
+
 ---
 layout: false
 class: center, middle
@@ -461,7 +602,13 @@ class: center, middle
 ![](img/merida-ohno.gif)
 
 ???
+
 when the rubber meets the road, you will need to push through the errors in development
+
+don't be afraid of starting over -- that's what got you into the problem the first place
+
+if you find something better...STOP...and use it (more cost up front, but return on investment will be HUGE)
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -469,6 +616,19 @@ class: huge-title, inverse, center, middle
 #problems
 
 (they are going to happen)
+
+???
+
+don't let it discourage you
+
+it's not nodes fault...it is most likely your understand of node
+
+don't question your decision on the issues you run into...deal with them and improve your code
+
+first node app - huge bug with mysql connections...we had a connection leak...once max_connections hit....application was unresponsive
+
+test database had a whole lot more max_connections and a shorter ttl...
+
 ---
 layout: false
 
@@ -487,6 +647,7 @@ layout: false
 - database connections/queries
 
 ???
+
 what you write affects the server. you can take something down very quick with node just as much as you can with other languages
 
 node is not a silver bullet
@@ -512,18 +673,24 @@ monitor the shit out of your application!
 - clean up your messes
 
 ???
+
 prototyping anything can fall into production, so create well defined and well written prototypes
+
 tools to help - node-load (for loadtesting)
+
     chrome dev tools (memory profiler)
+
     testing frameworks -- we use mocha
+
     test
+
     handle all sorts of errors, user/server/unrecoverable
+
     log as much as possible!
 
 Your application should be able to handle a decent amount of load on its own.
-load balancing and scaling with hardware might be necessary
 
-pm2 monit, outputting server stats to a log
+load balancing and scaling with hardware might be necessary
 
 ---
 layout: false
@@ -546,14 +713,27 @@ layout: false
 - scriptable monitoring
 
 - ```forever start app.js``` is not the greatest solution
+
 ???
 
 forever was serviceable at the beginning
+
+had to grow up and find something more robust
+
+it's very important to really focus on how to have 0s downtime.
+
+With forever with watch, you would still have blips
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
 
 #pm2
+
+???
+
+Karl Kirch did a lightning talk on this at OKCjs and SpringBeta after we started using this
+
 ---
 layout: false
 
@@ -584,10 +764,17 @@ layout: false
 class: huge-title, inverse, center, middle
 
 ci/cd
+
+???
+
+This is true for any language, but you should really find ways to inject Continuous Integration/Deployment to your workflow
+
 ---
 layout: false
 
 ##what do we use?
+
+- grunt
 
 - jenkins
 
@@ -595,9 +782,30 @@ layout: false
 
 - npm-lite
 
+???
+
+There are plenty of other things you can use
 ---
 layout: false
 .left-column[
+### grunt
+]
+.right-column[
+
+- task runner
+
+- browserify stuff
+
+- lint code
+
+- automate all the things!
+
+]
+
+---
+layout: false
+.left-column[
+### grunt
 ### jenkins
 ]
 .right-column[
@@ -613,6 +821,7 @@ layout: false
 ---
 layout: false
 .left-column[
+### grunt
 ### jenkins
 ### nexus
 ]
@@ -632,6 +841,7 @@ layout: false
 ---
 layout: false
 .left-column[
+### grunt
 ### jenkins
 ### nexus
 ### npm-lite
@@ -662,6 +872,17 @@ layout: false
 - migrate applications from express to hapi
 
 - use pm2 to load balance requests across cores on a server
+
+???
+
+you're probably not going to start out in this perfect world.
+
+bite off small chunks are start building workflows to your company's need
+
+lots of tools out there to help you out.
+
+don't always pick the first tool you find!
+
 ---
 layout: false
 class: huge-title, inverse, center, middle
@@ -670,6 +891,11 @@ you don't have to know node
 
 
 (just jump in)
+
+???
+
+if you now a little bit of javascript and want to build something in node, it's pretty staightforward
+
 ---
 layout: false
 class: middle
